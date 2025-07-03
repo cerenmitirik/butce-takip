@@ -7,7 +7,9 @@ splash.js:
 • Bu süre zarfında AsyncStorage üzerinden "currentUser" anahtarı kontrol edilir. 
 • Eğer kullanıcı verisi varsa navigation.replace() ile doğrudan Home.js sayfasına yönlendirme yapılır. 
 • Kullanıcı kaydı bulunmuyorsa veya hata oluşursa LoginScreen.js sayfasına yönlendirilir.
-![1](https://github.com/user-attachments/assets/67495e6c-bbd7-4b63-bd99-d873d85e2f00)
+
+![splash](https://github.com/user-attachments/assets/a7899c5b-73e0-493f-9cdd-b977f1a471fc)
+
 2- LoginScreen.js – Giriş ve Hesap Oluşturma Sayfası 
 • Giriş yapma veya hesap oluşturma modları arasında geçiş yapılabilir. 
 • E-posta ve şifre girilerek kullanıcı doğrulaması yapılır. 
@@ -16,8 +18,10 @@ splash.js:
 • Başarılı giriş/kayıt sonrası kullanıcı Home.js sayfasına yönlendirilir. 
 • Şifre alanı için görünürlük kontrolü yapılır (şifre göster/gizle). 
 • Kayıtlı e-posta adresiyle tekrar kayıt yapılması engellenir.
-![3](https://github.com/user-attachments/assets/66c267c1-d3f5-4695-b87f-9609e6630136)
-![2](https://github.com/user-attachments/assets/851d013b-f916-410d-b125-0deb6e9cc284)
+
+![giris](https://github.com/user-attachments/assets/d04531c1-59f8-4bfe-b2f3-db37b86d9523)
+
+
 3- HomeScreen.js – Ana Sayfa ve Uygulama Merkezi
 • Navigasyon Butonları: Kullanıcı, Fatura Ekle, Harcamalarım, Listele, Grafik gibi temel modüllere bu sayfadan 
 erişebilir. 
@@ -27,8 +31,9 @@ gösterilir.
 • Hesaplar Menüsü: Kullanıcılar arası geçiş yapılabilir, çıkış yapılabilir, yeni hesap eklenebilir. 
 • Kullanıcıya Özel Veriler: AsyncStorage ile kullanıcı bazlı fatura ve harcama verileri yüklenir ve saklanır. 
 • Otomatik Hesaplamalar: useEffect ile fatura ve harcamalar değiştiğinde özet bilgiler güncellenir.
-![4](https://github.com/user-attachments/assets/be4154b1-6da8-48b4-962e-8dc20ea5a901)
-![WhatsApp Image 2025-06-26 at 21 56 11 (1)](https://github.com/user-attachments/assets/49289a27-9a48-41ac-b77a-231e66a4d109)
+
+![ana](https://github.com/user-attachments/assets/fb6c0ca7-d0e5-42b6-bb3e-ea1afe763fab)
+
 4 - AddBillScreen.js – Fatura Ekleme Ekranı
 • Kategori seçimi: Ön tanımlı fatura kategorileri arasından seçim yapılır; “Diğer” seçilirse özel fatura adı girilebilir. 
 • Tutar girişi: Kullanıcı, numeric klavye ile tutar bilgisi girer. 
@@ -37,9 +42,11 @@ gösterilir.
 • Fatura kaydetme: Girilen bilgiler, kullanıcının e-posta adresine özel olarak AsyncStorage’da saklanır. 
 • Başarılı kayıtta navigasyon: Fatura kaydedildikten sonra kullanıcı ana ekrana yönlendirilir. 
 • Kullanıcı doğrulaması: Ekran açıldığında geçerli kullanıcı bilgisi yoksa uyarı gösterilip geri dönülür. 
-![7](https://github.com/user-attachments/assets/cc95aaf3-b30b-46ed-84e8-0183ae5ff42e)
-![WhatsApp Image 2025-06-27 at 01 26 01](https://github.com/user-attachments/assets/80b05b38-365c-4f22-955c-093a62003fba)
-![WhatsApp Image 2025-06-26 at 21 56 10 (1)](https://github.com/user-attachments/assets/d9fabcbe-1698-4800-aee2-162c5e8ac01c)
+
+![fatura1](https://github.com/user-attachments/assets/654b2669-ecce-41d1-9d07-7d848eab7064)
+
+![fatura2](https://github.com/user-attachments/assets/64ffd646-915a-4869-a3ff-4b723bee6cbe)
+
 5 - ExpensesScreen.js – Harcama Ekleme Ekranı
 • Kategori seçimi: Ön tanımlı kategoriler veya “Diğer” seçeneği ile özel kategori girişi yapılabilir. 
 • Açıklama girme: Harcamaya açıklama eklenebilir. 
@@ -50,9 +57,11 @@ gösterilir.
 • Form doğrulama: Zorunlu alanlar kontrol edilir, eksik bilgi varsa kullanıcı uyarılır. 
 • Veri kaydetme: AsyncStorage’a kullanıcıya özel anahtarla harcama listesine yeni kayıt eklenir. 
 • Navigasyon: Kayıt sonrası geri dönülür, iptal seçeneği ile de çıkılabilir. 
-![WhatsApp Image 2025-06-26 at 21 56 12](https://github.com/user-attachments/assets/a8d6354e-af28-4f7b-bee3-967bded270e6)
-![WhatsApp Image 2025-06-27 at 01 27 13](https://github.com/user-attachments/assets/29395655-0a48-43a2-ac8d-08ba54e8fbd5)
-![WhatsApp Image 2025-06-26 at 21 56 12 (1)](https://github.com/user-attachments/assets/21efd711-96e0-4d87-9a46-0b830e88ad8f)
+
+![haarcama1](https://github.com/user-attachments/assets/3ec77313-8368-4e8d-ad63-9692a1b13f4f)
+
+![harcama2](https://github.com/user-attachments/assets/b2b5a138-40a9-4af4-b2e2-b41292554bca)
+
 6 - ListScreen.js – Kayıt Listeleme Ekranı 
 şlevler 
 • Veri yükleme: AsyncStorage’dan kullanıcıya özel faturalar ve harcamalar yüklenir. 
@@ -64,8 +73,11 @@ o Kategoriye göre filtreleme.
 • Durum güncelleme: Faturaların ödeme durumu (odendiMi) işaretlenip kaydedilir. 
 • Liste gösterimi: FlatList ile filtrelenmiş kayıtlar tarih sırasına göre listelenir. 
 • Tarih seçici: Özel tarih aralığında başlangıç ve bitiş tarihleri için DateTimePicker açılır. 
-![WhatsApp Image 2025-06-26 at 21 56 14](https://github.com/user-attachments/assets/141acbd8-e3c7-4666-b36d-f71998d85428)
-![WhatsApp Image 2025-06-26 at 21 56 16 (1)](https://github.com/user-attachments/assets/84f0cea5-80ea-466f-863d-678b69c370aa)
+
+![liste1](https://github.com/user-attachments/assets/91b2b527-f00c-45a2-9434-b7865fed3e5e)
+
+![liste2](https://github.com/user-attachments/assets/116cc5d4-3b37-46ab-98bd-a8b3e11d536d)
+
 7 - ChartScreen.js – Grafikler ve İstatistik Ekranı
 Temel Özellikler 
 � Bu Ayın Dağılımı: 
@@ -79,6 +91,7 @@ belirtilir.
 � Kategori Bazlı Kıyaslama (Son 6 Ay): 
 • Seçilen bir kategori için son 6 aylık veriler sütun grafik ile gösterilir. 
 • Kullanıcı hem kayıt türünü (harcama/fatura) hem de kategoriyi seçebilir.
+
 ![chart](https://github.com/user-attachments/assets/0a2ea048-83ba-4f35-8d11-a5376ea78eac)
 
 
